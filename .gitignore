@@ -1,0 +1,11 @@
+# macOS system files
+.DS_Store
+
+# Database files 
+.db 
+
+# csv output files
+.csv
+
+# MS Excelt output files
+.xlsx
