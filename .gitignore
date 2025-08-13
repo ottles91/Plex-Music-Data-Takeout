@@ -2,10 +2,10 @@
 .DS_Store
 
 # Database files 
-.db 
+*.db 
 
 # csv output files
-.csv
+*.csv
 
 # MS Excel output files
-.xlsx
+*.xlsx
