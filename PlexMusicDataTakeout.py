@@ -9,7 +9,6 @@ from pathlib import Path
 # macOS path:
 plex_db_path = Path.home() / "Library/Application Support/Plex Media Server/Plug-in Support/Databases/com.plexapp.plugins.library.db"
 
-
 # Windows path (replace USERNAME):
 # plex_db_path = Path(r"C:\Users\USERNAME\AppData\Local\Plex Media Server\Plug-in Support\Databases\com.plexapp.plugins.library.db")
 
@@ -59,6 +58,7 @@ SELECT
     movies.added_at AS added_timestamp
 FROM metadata_items AS movies
 WHERE movies.metadata_type = 1
+  AND movies.library_section_id = 3  
 ORDER BY movie_title
 """
 
