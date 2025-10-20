@@ -112,31 +112,3 @@ export_query_to_csv(
 # === Done ===
 conn.close()
 print(f"\nAll exports complete. Files saved in: {output_dir.resolve()}")
-
-
-
-
-
-# cursor.execute(query)
-# rows = cursor.fetchall()
-
-# === Write to CSV ===
-# with open(output_csv, "w", newline="", encoding="utf-8") as f:
-#     writer = csv.writer(f)
-#     writer.writerow(["Track", "Album", "Artist", "Release Date", "Duration (seconds)", "GUID", "Added Timestamp"])
-#     writer.writerows(rows)
-
-# print(f"CSV exported: {output_csv.resolve()}")
-
-# # === Optional Excel output ===
-# if make_excel_too:
-#     try:
-#         import pandas as pd
-#         df = pd.DataFrame(rows, columns=["Track", "Album", "Artist", "Release Date", "Duration (seconds)", "GUID", "Added Timestamp"])
-#         excel_path = output_csv.with_suffix(".xlsx")
-#         df.to_excel(excel_path, index=False)
-#         print(f"Excel exported: {excel_path.resolve()}")
-#     except ImportError:
-#         print("Pandas not installed, skipping Excel output. Install with: pip install pandas openpyxl")
-
-# conn.close()
