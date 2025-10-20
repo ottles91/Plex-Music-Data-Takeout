@@ -4,14 +4,16 @@ import shutil
 from pathlib import Path
 
 # === CONFIG ===
+
 # Change this to the path of your Plex database
 # macOS path:
 plex_db_path = Path.home() / "Library/Application Support/Plex Media Server/Plug-in Support/Databases/com.plexapp.plugins.library.db"
+
 # Windows path (replace USERNAME):
 # plex_db_path = Path(r"C:\Users\USERNAME\AppData\Local\Plex Media Server\Plug-in Support\Databases\com.plexapp.plugins.library.db")
 
 output_csv = Path("plex_music_library.csv")
-make_excel_too = True  # Set to False if you don't want Excel output
+make_excel_too = False  # Set to False if you don't want Excel output
 
 # === SAFETY: make a copy so we don't touch the live DB ===
 db_copy_path = Path("plex_library_copy.db")
